@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1373c0ecece547dca68a127101646b72 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1373c0ecece547dca68a127101646b72" ></div>
+        
+</body>
+<script>    
+    
+            var map_1373c0ecece547dca68a127101646b72 = L.map(
+                "map_1373c0ecece547dca68a127101646b72",
+                {
+                    center: [-22.58606335091219, -47.44442532391977],
+                    crs: L.CRS.EPSG3857,
+                    maxBounds: [[-90, -180], [90, 180]],
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_1373c0ecece547dca68a127101646b72);
+
+            
+
+        
+    
+            var tile_layer_3b6908fb25924349a3e3acb36a766e2e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 15, "maxZoom": 15, "minZoom": 15, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1373c0ecece547dca68a127101646b72);
+        
+    
+            var feature_group_c7725fe73f2345afb37e13d8e835428e = L.featureGroup(
+                {}
+            ).addTo(map_1373c0ecece547dca68a127101646b72);
+        
+    
+        function geo_json_2851110d87584ca48c4025996dfbfd1c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ffa500", "fillColor": "#ffa500", "fillOpacity": 0.2, "weight": 0.5};
+            }
+        }
+        function geo_json_2851110d87584ca48c4025996dfbfd1c_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_1373c0ecece547dca68a127101646b72.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_2851110d87584ca48c4025996dfbfd1c = L.geoJson(null, {
+                onEachFeature: geo_json_2851110d87584ca48c4025996dfbfd1c_onEachFeature,
+            
+                style: geo_json_2851110d87584ca48c4025996dfbfd1c_styler,
+        }).addTo(feature_group_c7725fe73f2345afb37e13d8e835428e);
+
+        function geo_json_2851110d87584ca48c4025996dfbfd1c_add (data) {
+            geo_json_2851110d87584ca48c4025996dfbfd1c.addData(data);
+        }
+            geo_json_2851110d87584ca48c4025996dfbfd1c_add({"features": [{"geometry": {"coordinates": [[[-47.4444794654846, -22.58960039298921], [-47.4445116519928, -22.589565722967407], [-47.4445921182632, -22.589513717918397], [-47.4447208642958, -22.589493906465908], [-47.44487106800079, -22.589464189281912], [-47.4449971318245, -22.58932303257052], [-47.445112466812205, -22.589236357325017], [-47.445233166217804, -22.589216545832713], [-47.4453431367874, -22.589216545832713], [-47.4455443024635, -22.589211592959106], [-47.44578301906591, -22.58902833651342], [-47.4460244178772, -22.588852509153828], [-47.446818351745605, -22.589011001431622], [-47.446973919868505, -22.589025860073328], [-47.4471133947372, -22.589060530231016], [-47.44719386100769, -22.58906053023102], [-47.44728505611419, -22.58905062447252], [-47.447381615638704, -22.589006048550726], [-47.4474996328354, -22.589020907192918], [-47.447665929794304, -22.589006048550722], [-47.4478644132614, -22.58894166108252], [-47.44738698005681, -22.587698481757247], [-47.4471992246453, -22.58708431615376], [-47.44705706777621, -22.586653409133376], [-47.4470221996307, -22.58651967984107], [-47.447032928466804, -22.586400808499565], [-47.447075843811, -22.586212595332483], [-47.4473172426224, -22.5854845051327], [-47.4474728107452, -22.585088263951004], [-47.447617650032, -22.58478612928402], [-47.4477195739746, -22.584662303409416], [-47.447955608367906, -22.584647444296923], [-47.4480736255646, -22.584271012913934], [-47.4482882022858, -22.583676645477848], [-47.44845986366269, -22.583161524958957], [-47.4481648206711, -22.582983213561263], [-47.44825065135961, -22.582418559279372], [-47.446325377639994, -22.582933556502468], [-47.4460815649778, -22.583030072709356], [-47.44476486153929, -22.584221217344933], [-47.44374612476419, -22.584728742272922], [-47.4421342380436, -22.5856827772758], [-47.441792316719, -22.585080033136517], [-47.44143966959749, -22.584477288250728], [-47.44048223967011, -22.585072216200007], [-47.4395408942889, -22.585781058212795], [-47.43984200139871, -22.586685516230975], [-47.44145202723681, -22.58587623756789], [-47.441560716468906, -22.585862444737298], [-47.4416386204106, -22.585914106491895], [-47.4423201534508, -22.587087269264476], [-47.44281929716161, -22.586913219057568], [-47.4434042702301, -22.586749072944368], [-47.44437087199991, -22.586434231240787], [-47.444246113300295, -22.587369111649256], [-47.4442058801651, -22.58776039334375], [-47.44419246912, -22.58791888687835], [-47.4442005157471, -22.588211108854544], [-47.4442166090012, -22.588582576573426], [-47.4442353844643, -22.589315603265817], [-47.444278299808495, -22.58942208992702], [-47.4443829059601, -22.589583057979414], [-47.4444794654846, -22.58960039298921]]], "type": "Polygon"}, "id": "1203", "properties": {"COD_ESTADO": "SP", "COD_IMOVEL": "SP-3526902-DF03E9D85A4247C68B00146C77812518", "CONDICAO_I": "Aguardando analise", "ENCLOSED_A": "317.41 sq km", "LAYER_1": "Unknown Area Type", "LAYER_2": "Unknown Area Type", "NOM_MUNICI": "Limeira", "NUM_AREA": 30.0678558349609, "NUM_MODULO": 3.0068, "PERIMETER": "67.12 km", "SITUACAO": "AT", "TIPO_IMOVE": "IRU", "area": 30.09, "length": 3361.995482106227}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+            var tile_layer_ff94ada252b3481e85ca7e0053dc3f42 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1373c0ecece547dca68a127101646b72);
+        
+    
+            var layer_control_2b6d1661f11341eb9f9e59fb792ffeb7 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_3b6908fb25924349a3e3acb36a766e2e,
+                },
+                overlays :  {
+                    "Esri Satellite" : tile_layer_ff94ada252b3481e85ca7e0053dc3f42,
+                },
+            };
+            L.control.layers(
+                layer_control_2b6d1661f11341eb9f9e59fb792ffeb7.base_layers,
+                layer_control_2b6d1661f11341eb9f9e59fb792ffeb7.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_1373c0ecece547dca68a127101646b72);
+            tile_layer_ff94ada252b3481e85ca7e0053dc3f42.remove();
+        
+</script>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7566d78b1f254ffd9bef3d3ec12cd6f6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_7566d78b1f254ffd9bef3d3ec12cd6f6" ></div>
+        
+</body>
+<script>    
+    
+            var map_7566d78b1f254ffd9bef3d3ec12cd6f6 = L.map(
+                "map_7566d78b1f254ffd9bef3d3ec12cd6f6",
+                {
+                    center: [-23.090594277689252, -47.24266777714277],
+                    crs: L.CRS.EPSG3857,
+                    maxBounds: [[-90, -180], [90, 180]],
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_7566d78b1f254ffd9bef3d3ec12cd6f6);
+
+            
+
+        
+    
+            var tile_layer_09f338a629dc450ca2b907b00e4d3730 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 15, "maxZoom": 15, "minZoom": 15, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7566d78b1f254ffd9bef3d3ec12cd6f6);
+        
+    
+            var feature_group_315f3d5453f84749bd79839598e1a178 = L.featureGroup(
+                {}
+            ).addTo(map_7566d78b1f254ffd9bef3d3ec12cd6f6);
+        
+    
+        function geo_json_a2c755d9e69d4ae8a4417fdb1c48640f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ffa500", "fillColor": "#ffa500", "fillOpacity": 0.2, "weight": 0.5};
+            }
+        }
+        function geo_json_a2c755d9e69d4ae8a4417fdb1c48640f_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_7566d78b1f254ffd9bef3d3ec12cd6f6.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_a2c755d9e69d4ae8a4417fdb1c48640f = L.geoJson(null, {
+                onEachFeature: geo_json_a2c755d9e69d4ae8a4417fdb1c48640f_onEachFeature,
+            
+                style: geo_json_a2c755d9e69d4ae8a4417fdb1c48640f_styler,
+        }).addTo(feature_group_315f3d5453f84749bd79839598e1a178);
+
+        function geo_json_a2c755d9e69d4ae8a4417fdb1c48640f_add (data) {
+            geo_json_a2c755d9e69d4ae8a4417fdb1c48640f.addData(data);
+        }
+            geo_json_a2c755d9e69d4ae8a4417fdb1c48640f_add({"features": [{"geometry": {"coordinates": [[[-47.2398215532303, -23.09287316086285], [-47.2460979223251, -23.090906720816893], [-47.245448827743495, -23.088673777219636], [-47.2392608506793, -23.090281834561612], [-47.2398215532303, -23.09287316086285]]], "type": "Polygon"}, "id": "413", "properties": {"COD_ESTADO": "SP", "COD_IMOVEL": "SP-3520509-8CF46049BFAD453EA13294387214F81C", "CONDICAO_I": "Aguardando analise", "ENCLOSED_A": "250.07 sq km", "LAYER_1": "Unknown Area Type", "LAYER_2": "Unknown Area Type", "NOM_MUNICI": "Indaiatuba", "NUM_AREA": 18.2833633422852, "NUM_MODULO": 1.8283, "PERIMETER": "72.019 km", "SITUACAO": "AT", "TIPO_IMOVE": "IRU", "area": 18.29, "length": 1886.653110826021}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+            var tile_layer_235573355ec448b8b9c280d7ef36542a = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7566d78b1f254ffd9bef3d3ec12cd6f6);
+        
+    
+            var layer_control_28996586b61047029fe364e89da4b5f5 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_09f338a629dc450ca2b907b00e4d3730,
+                },
+                overlays :  {
+                    "Esri Satellite" : tile_layer_235573355ec448b8b9c280d7ef36542a,
+                },
+            };
+            L.control.layers(
+                layer_control_28996586b61047029fe364e89da4b5f5.base_layers,
+                layer_control_28996586b61047029fe364e89da4b5f5.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_7566d78b1f254ffd9bef3d3ec12cd6f6);
+            tile_layer_235573355ec448b8b9c280d7ef36542a.remove();
+        
+</script>
